@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7030B8AD-0B02-4331-8FA1-C8B121076D3D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MagicMITM</RootNamespace>
+    <AssemblyName>MagicMITM</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <LangVersion>6</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <LangVersion>6</LangVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\CreateRoleResultCode.cs" />
+    <Compile Include="Data\EquipInfo.cs" />
+    <Compile Include="Data\FriendForm.cs" />
+    <Compile Include="Data\GBattleChallenge.cs" />
+    <Compile Include="Data\Gender.cs" />
+    <Compile Include="Data\GGuildBase.cs" />
+    <Compile Include="Data\GRoleBase.cs" />
+    <Compile Include="Data\GRoleForbid.cs" />
+    <Compile Include="Data\GRoleInventory.cs" />
+    <Compile Include="Data\GuildStatus.cs" />
+    <Compile Include="Data\HpMp.cs" />
+    <Compile Include="Data\MapId.cs" />
+    <Compile Include="Data\NpcWorldInfo.cs" />
+    <Compile Include="Data\Occupation.cs" />
+    <Compile Include="Data\Point3F.cs" />
+    <Compile Include="Data\PShopBase.cs" />
+    <Compile Include="Data\PShopEntry.cs" />
+    <Compile Include="Data\PShopItem.cs" />
+    <Compile Include="Data\RoleInfo.cs" />
+    <Compile Include="Data\RoleStatsInfo.cs" />
+    <Compile Include="Data\RoleWorldInfo.cs" />
+    <Compile Include="Data\ServerVersion.cs" />
+    <Compile Include="Data\UnixTime.cs" />
+    <Compile Include="Data\WorldObject.cs" />
+    <Compile Include="IO\BigEndianConverter.cs" />
+    <Compile Include="IO\DataSerializer.cs" />
+    <Compile Include="IO\DataStream.cs" />
+    <Compile Include="IO\EndianBitConverter.cs" />
+    <Compile Include="IO\Endianness.cs" />
+    <Compile Include="IO\LittleEndianBitConverter.cs" />
+    <Compile Include="IO\MarshallerException.cs" />
+    <Compile Include="Logger.cs" />
+    <Compile Include="Net\GameServer.cs" />
+    <Compile Include="Net\MitmBaseServer.cs" />
+    <Compile Include="Net\MitmSession.cs" />
+    <Compile Include="Net\MitmProxyServer.cs" />
+    <Compile Include="Net\MitmStaticServer.cs" />
+    <Compile Include="Net\Packets\BasePacket.cs" />
+    <Compile Include="Net\Packets\Client\BattleChallengeMapC356.cs" />
+    <Compile Include="Net\Packets\Client\ChangePartyLeaderC48.cs" />
+    <Compile Include="Net\Packets\Client\ChatRoomCreateCDB.cs" />
+    <Compile Include="Net\Packets\Client\ClientContainerC22.cs" />
+    <Compile Include="Net\Packets\Client\CMKeyC02.cs" />
+    <Compile Include="Net\Packets\Client\CreateRoleC54.cs" />
+    <Compile Include="Net\Packets\Client\DeleteRoleC56.cs" />
+    <Compile Include="Net\Packets\Client\DropMoneyC14.cs" />
+    <Compile Include="Net\Packets\Client\EnterWorldC48.cs" />
+    <Compile Include="Net\Packets\Client\GetCustomDataC74.cs" />
+    <Compile Include="Net\Packets\Client\GetGuildBaseInfoC12CE.cs" />
+    <Compile Include="Net\Packets\Client\GetInventoryC27.cs" />
+    <Compile Include="Net\Packets\Client\GetRoleBaseInfoC5B.cs" />
+    <Compile Include="Net\Packets\Client\GetRoleIdByNameC76.cs" />
+    <Compile Include="Net\Packets\Client\GuildMailCAE.cs" />
+    <Compile Include="Net\Packets\Client\GuildChatC12C3.cs" />
+    <Compile Include="Net\Packets\Client\InviteChatRoomCDD.cs" />
+    <Compile Include="Net\Packets\Client\KeepAliveC5A.cs" />
+    <Compile Include="Net\Packets\Client\LogginAnnounceC03.cs" />
+    <Compile Include="Net\Packets\Client\LogoutC01.cs" />
+    <Compile Include="Net\Packets\Client\OpenNpcDialogC23.cs" />
+    <Compile Include="Net\Packets\Client\PrivateChatC60.cs" />
+    <Compile Include="Net\Packets\Client\PShopListC39E.cs" />
+    <Compile Include="Net\Packets\Client\PShopPlayerGetC39C.cs" />
+    <Compile Include="Net\Packets\Client\PublicChatC4F.cs" />
+    <Compile Include="Net\Packets\Client\ResetTargetC08.cs" />
+    <Compile Include="Net\Packets\Client\RoleListC52.cs" />
+    <Compile Include="Net\Packets\Client\SelectRoleC46.cs" />
+    <Compile Include="Net\Packets\Client\SetTargetC02.cs" />
+    <Compile Include="Net\Packets\Client\ShopBuyC6A.cs" />
+    <Compile Include="Net\Packets\Client\TradeStartCFA1.cs" />
+    <Compile Include="Net\Packets\Client\UndoDeleteRoleC58.cs" />
+    <Compile Include="Net\Packets\GamePacket.cs" />
+    <Compile Include="Net\Packets\PacketEventArgs.cs" />
+    <Compile Include="Net\Packets\PacketEventHandler.cs" />
+    <Compile Include="Net\Packets\PacketEventHandlerPriority.cs" />
+    <Compile Include="Net\Packets\PacketIdentifier.cs" />
+    <Compile Include="Net\Packets\PacketsHandler.cs" />
+    <Compile Include="Net\Packets\PacketsRegistry.cs" />
+    <Compile Include="Net\Packets\PacketType.cs" />
+    <Compile Include="Net\Packets\Server\AnnounceForbidInfoS7B.cs" />
+    <Compile Include="Net\Packets\Server\BattleChallengeMap_ReS357.cs" />
+    <Compile Include="Net\Packets\Server\ChatRoomCreate_ReSDC.cs" />
+    <Compile Include="Net\Packets\Server\CreateRole_ReS55.cs" />
+    <Compile Include="Net\Packets\Server\GetCustomData_ReS75.cs" />
+    <Compile Include="Net\Packets\Server\GetGuildBaseInfo_ReS12CF.cs" />
+    <Compile Include="Net\Packets\Server\GetPlayerGuildInfo_ReS12D1.cs" />
+    <Compile Include="Net\Packets\Server\GetRoleIdByName_ReS77.cs" />
+    <Compile Include="Net\Packets\Server\GuildChatS12C3.cs" />
+    <Compile Include="Net\Packets\Server\InvalidTargetSC2.cs" />
+    <Compile Include="Net\Packets\Server\LastLoginInfoS8F.cs" />
+    <Compile Include="Net\Packets\Server\LocalChatS50.cs" />
+    <Compile Include="Net\Packets\Server\NpcEnterS0B_10.cs" />
+    <Compile Include="Net\Packets\Server\NpcGreetingS46.cs" />
+    <Compile Include="Net\Packets\Server\NpcListS09.cs" />
+    <Compile Include="Net\Packets\Server\NpcTargetInfoS21.cs" />
+    <Compile Include="Net\Packets\Server\ObjectLeaveS0D_13_14_15.cs" />
+    <Compile Include="Net\Packets\Server\ObjectMoveS0F.cs" />
+    <Compile Include="Net\Packets\Server\OnlineAnnounceS04.cs" />
+    <Compile Include="Net\Packets\Server\PlayerPositionS08.cs" />
+    <Compile Include="Net\Packets\Server\PrivateChatS60.cs" />
+    <Compile Include="Net\Packets\Server\PShopList_ReS39F.cs" />
+    <Compile Include="Net\Packets\Server\PShopPlayerGet_ReS39D.cs" />
+    <Compile Include="Net\Packets\Server\ResetTargetReS27.cs" />
+    <Compile Include="Net\Packets\Server\RoleBaseInfoS5C.cs" />
+    <Compile Include="Net\Packets\Server\RoleEnterS0C_11.cs" />
+    <Compile Include="Net\Packets\Server\RoleList_ReS53.cs" />
+    <Compile Include="Net\Packets\Server\RoleLogoutS45.cs" />
+    <Compile Include="Net\Packets\Server\RolesListS04.cs" />
+    <Compile Include="Net\Packets\Server\SelectRole_ReS47.cs" />
+    <Compile Include="Net\Packets\Server\SelectTargetReS34.cs" />
+    <Compile Include="Net\Packets\Server\ServerContainerS00.cs" />
+    <Compile Include="Net\Packets\Server\ServerInfoS01.cs" />
+    <Compile Include="Net\Packets\Server\ShopBuyCompleteS63.cs" />
+    <Compile Include="Net\Packets\Server\SilverInfoSFD.cs" />
+    <Compile Include="Net\Packets\Server\SMKeyS02.cs" />
+    <Compile Include="Net\Packets\Server\TargetInfoS20.cs" />
+    <Compile Include="Net\Packets\Server\TradeStart_ReSFA2.cs" />
+    <Compile Include="Net\Packets\Server\WorldChatS85.cs" />
+    <Compile Include="Net\Plugin.cs" />
+    <Compile Include="Net\PluginManager.cs" />
+    <Compile Include="Net\Plugins\AccountRolesPlugin.cs" />
+    <Compile Include="Net\Plugins\AuthInfoPlugin.cs" />
+    <Compile Include="Net\Plugins\BasePlugins.cs" />
+    <Compile Include="Net\Plugins\ChatHandlerPlugin.cs" />
+    <Compile Include="Net\Plugins\ChatPlugin.cs" />
+    <Compile Include="Net\Plugins\ContainersPlugin.cs" />
+    <Compile Include="Net\Plugins\LoginChangeEncryptionPlugin.cs" />
+    <Compile Include="Net\Plugins\DefaultEncryptionPlugin.cs" />
+    <Compile Include="Net\Plugins\FakeGoldHack.cs" />
+    <Compile Include="Net\Plugins\WorldEnteredPlugin.cs" />
+    <Compile Include="Net\Security\Base\C2SEncryption.cs" />
+    <Compile Include="Net\Security\Base\S2CEncryption.cs" />
+    <Compile Include="Net\Security\Encryptor.cs" />
+    <Compile Include="Net\SocketStateObject.cs" />
+    <Compile Include="Net\Proxy\Socks4\Socks4Helper.cs" />
+    <Compile Include="Net\Proxy\Socks4\Socks4Packet.cs" />
+    <Compile Include="Net\Proxy\Socks4\Socks4ServiceCode.cs" />
+    <Compile Include="Net\Security\MD5Hash.cs" />
+    <Compile Include="Net\Security\MppcPacker.cs" />
+    <Compile Include="Net\Security\MppcUnpucker.cs" />
+    <Compile Include="Net\Security\Rc4Encryption.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Threading\ActionTimer.cs" />
+    <Compile Include="Net\Packets\Server\KeepAliveS5a.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
